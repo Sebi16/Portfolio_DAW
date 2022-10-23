@@ -1,3 +1,10 @@
+# Apache
+
+## Introducción
+
+Apache HTTP Server es el servidor web por excelencia. Es una herramienta libre que ha acompañado el desarrollo de la web prácticamente desde sus inicios y durante mucho tiempo ha sido el servidor web más utilizado en Internet aunque recientemente ha cedido el podio a otro servidor libre: nginx.
+
+El servidor web Apache HTTP Server se desarrolla de manera abierta bajo el amparo de la Fundación Apache que también desarrolla muchos otros proyectos libres e interesantes.
 
 ## Configuración Apache
 
@@ -105,3 +112,79 @@ Para volver a habilitar el servicio de modo que se cargue en el inicio, escriba 
 sudo systemctl enable apache2
 ```
 Ahora, Apache debería iniciarse de forma automática cuando el servidor lo haga de nuevo.
+
+### 5. Configuración del archivo de configuración de VirtualHost
+
+Comenzamos este paso yendo al directorio de archivos de configuración:
+```
+cd /etc/apache2/sites-available/
+```
+Dado que Apache vino con un archivo VirtualHost predeterminado, usémoslo como base. (gci.conf se usa aquí para que coincida con nuestro nombre de subdominio):
+```
+sudo cp 000-default.conf gci.conf
+```
+Editamos el archivo:
+```
+sudo nano gci.conf
+```
+Una vez dentro del archivo escribimos lo siguiente:
+```
+ServerAdmin yourname@example.com
+```
+```
+DocumentRoot /var/www/gci/
+```
+```
+ServerName gci.example.com
+```
+
+### 6. Activating VirtualHost file
+Después de configurar nuestro sitio web, debemos activar el archivo de configuración de hosts virtuales para habilitarlo.
+Para habilitarlo usaremos lo siguiente comando:
+```
+sudo a2ensite gci.conf
+```
+Deberías ver el siguiente resultado:
+```
+Enabling site gci.
+To activate the new configuration, you need to run:
+  service apache2 reload
+root@ubuntu-server:/etc/apache2/sites-available#
+```
+Para cargar el nuevo sitio, reiniciamos Apache escribiendo:
+```
+service apache2 reload
+```
+Una vez realizado todo nos tendría que salir el siguiente resultado:  
+![](https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/original/2X/7/7d6944922296826f70f27ec9b5eff67bd7f46158.png)
+
+En el caso de que nos saliera el siguiente problema:  
+![](https://www.desarrollolibre.net/public/images/example/apache/sitio-caido.png?ezimgfmt=rs:300x225/rscb1/ng:webp/ngcb1)
+
+Deberemos ir al siguiente directorio y modificar el archivo hosts.
+```
+cd /etc/hosts
+```
+Una vez dentro ejecutaremos el siguiente comando
+```
+sudo nano hosts
+```
+Dentro del archivo hosts deberemos agrgar nuestro dominio.
+```
+127.0.0.1 desarrollolibre2.net
+```
+Ahora si navegamos a nuestro dominio podremos visulizar nuestra pagina.  
+![](https://www.desarrollolibre.net/public/images/example/apache/sitio-activo.png?ezimgfmt=rs:300x286/rscb1/ng:webp/ngcb1)
+
+## Conclusión
+Apache es el servidor web con el que trabajan miles de hosting a nivel mundial.  
+Es ideal para pequeñas y medianas empresas que desean tener presencia en el mundo digital. Muy compatible con WordPress, lo que permite poder trabajar de manera sencilla y ordenada.
+
+## Bibliografía
+[Link 1](https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es)  
+[Link 2](https://ubuntu.com/tutorials/install-and-configure-apache#1-overview)  
+[Link 3](https://www.desarrollolibre.net/blog/apache/que-son-y-como-emplear-los-virtualhost-en-apache)  
+[Link 4](https://www.neolo.com/blog/que-es-apache-y-como-funciona-este-servidor.php)  
+[Link 5](https://elpuig.xeill.net/Members/vcarceler/articulos/introduccion-a-apache-http-server)  
+
+
