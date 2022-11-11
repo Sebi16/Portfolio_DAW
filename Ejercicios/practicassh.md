@@ -1,4 +1,4 @@
-# Practica SSH
+# Práctica SSH
 
 ## PC Servidor
 ### Crear un usuario nuevo
@@ -41,25 +41,25 @@ Ejemplo del resultado:
 ![](https://lh4.googleusercontent.com/TNsVTUC0cZELaz4gkRVRkzdJ1steWeVl0OZgFnN9ImzW6cQ8fzxVSbBUbao7YH0JxEY=w2400)
 
 ### Instalar Apache en el servidor
-Para instalar apache en el sevidor usaremos los siguientes comandos:
+Para instalar apache en el servidor usaremos los siguientes comandos:
 
 Para instalar apache.
 ```
 sudo apt install apache2
 ```
 
-Para seguir con la parte de configuracion visitar los siguientes links:  
+Para seguir con la parte de configuración visitar los siguientes links:  
 [Link 1](https://github.com/Sebi16/Portfolio_DAW/edit/main/Ejercicios/Apache.md)  
 [Link 2]()  
 [Link 3]()  
 
-Una vez realizada la configuracion el resultado final debe ser similar al siguiente:  
+Una vez realizada la configuración el resultado final debe ser similar al siguiente:  
 ![](https://lh6.googleusercontent.com/EkLnHS4MUgv2FCAyIICw4MH-9dhSr0GIaDu1nGuanYg3rEACEn9CHF2qdNxh34zxyXo=w2400)
 
 ### Pasa una web a algún lugar del servidor
-Para pasar una pagina web lo primero deberemos cnfigurar el archivo de configuración de VirtualHost.
+Para pasar una pagina web lo primero deberemos configurar el archivo de configuración de VirtualHost.
 
-### Creacion y configuracion del virtualhost
+### Creación y configuración del virtualhost
 Para crear y configurar el virtualhost, usaremos los siguientes comandos:
 
 Comenzamos este paso yendo al directorio de archivos de configuración:
@@ -112,7 +112,7 @@ En el caso de que nos saliera el siguiente problema:
 Pasaremos al siguiente paso que es Modificar los hosts.
 
 ### Modifica los host del local para que con la dirección elegida vaya a la ip del servidor
-Para modificar los hosts deberiamos ir al siguiente directorio y modificar el archivo hosts.
+Para modificar los hosts deberíamos ir al siguiente directorio y modificar el archivo hosts.
 ```
 cd /etc/hosts
 ```
@@ -122,12 +122,12 @@ Una vez dentro ejecutaremos el siguiente comando:
 sudo nano hosts
 ```
 
-Dentro del archivo hosts deberemos agrgar nuestro dominio.
+Dentro del archivo hosts deberemos agregar nuestro dominio.
 ```
 127.0.0.1 desarrollolibre2.net
 ```
 ```
 192.168.0.135 desarrollolibre2.net
 ```
-Ahora si navegamos a nuestro dominio podremos visulizar nuestra pagina.
+Ahora si navegamos a nuestro dominio podremos visualizar nuestra página.
 ![](https://lh4.googleusercontent.com/ySvXjjaQJqoquzbNBg5hu7l_w5Yw8L7BIWXcx7RqLimRBo5DZXWZqcU3OKkSbY9iwb8=w2400)
