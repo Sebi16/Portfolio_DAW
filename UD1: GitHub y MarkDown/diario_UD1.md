@@ -51,5 +51,35 @@ He aprendido que es apache.
 He aprendido a manejar los comandos de apache.
 He aprendido a instalar Tomcat.
 
+### Qué no entiendo
+
+Al principio habian bastantes cosas que no entendia como por ejemplo los archivos de virtualhost y rl archivo de hosts.
+
+### Qué es lo que más me ha gustado y qué es lo que menos
+
+Lo que mas me gusto fue el echo de poder visualizar mi pagina utilizando mi propio dominio.
+
+### Qué más me gustaría saber relacionado con la Unidad
+
+Me gustaria saber que mas cosas se puede hacer con apache.
+
+## Tema 4: Trabajo en remoto
+
+### Qué he aprendido
+
+He aprendido a usar ssh para conectarme con un servidor remoto.
+
+### Qué no entiendo
+
+En este apartado no tengo nada que poner ya que lo entendia todo.
+
+
+### Qué es lo que más me ha gustado y qué es lo que menos
+
+Lo que mas me gusto fue el echo de conectarme a otro pc y pasar una pagina web a algun servidor.
+
+### Qué más me gustaría saber relacionado con la Unidad
+
+Me gustaria saber que mas cosas se puede hacer con ssh.
 
 
